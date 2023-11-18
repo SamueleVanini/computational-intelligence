@@ -53,7 +53,7 @@ def main(MU: int, LAMBDA: int, RO: int, SEED: int, N_GAMES: int, N_GEN: int):
     probs_strategies_to_test = [[PredeterminedRules(), MaxObjectLowestRow(), Random()]]
     
     plotting_data = []
-    plotting_data.append(evolve_prob_player(MU, LAMBDA, RO, N_GEN, probs_strategies_to_test, fit, prob_one_cut, prob_rand))
+    plotting_data.extend(evolve_prob_player(MU, LAMBDA, RO, N_GEN, probs_strategies_to_test, fit, prob_one_cut, prob_rand))
     plotting_data.append(evolve_adapt_player(MU, LAMBDA, RO, N_GEN, len(nim.rows), fit, adapt_one_cut, adapt_rand))
         
     # plotting
